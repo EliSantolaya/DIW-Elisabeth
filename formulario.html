@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Cumpleaños</title>
 </head>
+
 <body>
+
+    <h1>Cumpleaños</h1>
+
+
     <form>
         <label for="name">Nombre:</label>
-        <input id="name " type="text">
-        <label>Contraseña:</label>
-        <input type="password" required>
-        <input type="date">
-        <input type="email">
-                
-        <input type="submit">
+        <input id="name" type="text" required>
+        <br>
+        <br>
+
+        <label>Apellidos:</label>
+        <input id="fname" type="text" required>
+        <input id="sname" type="text" required>
+        <br>
+        <br>
+
+        <label>Email: </label>
+        <input id="email" type="email" required>
+        <br>
+        <br>
+
+        <label>Fecha de nacimiento: </label>
+        <input id="date" type="date" required>
+        <br>
+        <br>
+
+        <h3>Elección del postre</h3>
+        <input type="radio" id="ngalleta" name="postre" value="Natillas">
+        <label>Natillas con galleta</label><br>
+        <input type="radio" id="arroz" name="postre" value="Arroz con leche">
+        <label>Arroz con leche</label><br>
+        <input type="radio" id="brownie" name="postre" value="Brownie">
+        <label>Brownie</label><br>
+        <input type="radio" id="tiramisu" name="postre" value="Tiramisu">
+        <label>Tiramisú</label><br>
+
+        <br>
+
+    
+        <h3>Fecha de fiesta</h3>
+        <input type="checkbox" id="1fecha" name="fecha" value="11-10-2024">
+        <label>11 de Octubre del 2024</label><br>
+        <input type="checkbox" id="1fecha" name="fecha" value="12-10-2024">
+        <label>12 de Octubre del 2024</label><br>
+        <input type="checkbox" id="1fecha" name="fecha" value="13-10-2024">
+        <label>13 de Octubre del 2024</label><br>
+
+
+        <h3>Mensaje de felicitación</h3>
+        <textarea name="felicitación" rows="8" cols="40"></textarea>
+        <br><br>
+        
+
+        <input type="submit"><br><br>
+        <input type="reset">
 
     </form>
 </body>
+
 </html>
