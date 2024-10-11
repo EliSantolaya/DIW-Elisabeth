@@ -1,0 +1,75 @@
+body {
+    font-family: Monaco, monospace;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: 20px auto ;
+    border-collapse: collapse;
+    width: 80%;
+    border-color: #333;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+th {
+    background-color: black;
+    color: white;
+    font-style: italic;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.recreo{
+    background-color: #fff281; 
+    color: black; 
+    text-transform: uppercase;
+}
+
+.diw {
+    background-color: #cfe0fc; 
+    color: #3f5ea4; 
+}
+
+.dwees {
+    background-color: #e8d9ff; 
+    color: #77459b; 
+}
+
+.dweec {
+    background-color: #d1f7c4; 
+    color: #5a8740; 
+}
+
+.ddaw {
+    background-color: #ffd6e8; 
+    color: #e07b9d; 
+}
+
+.eeie {
+    background-color: #ffe6cc; 
+    color: #d56b27;
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-style: italic;
+}
+
+
+/*textos de las columnas con una linea por encima, textos filas con subrayado
+
+titulos, fondo negro, texto blanco y en cursiva*/
