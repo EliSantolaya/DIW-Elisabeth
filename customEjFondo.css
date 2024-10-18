@@ -1,0 +1,29 @@
+article{
+    border: 1px solid red;
+    background-color: red;
+    background-image: url("img/anivia.jpg");
+    height: 80vh;
+}
+
+*{
+    color: white;
+}
+
+body{
+    background-color: blue;
+    margin: 0;
+    height: 100vh;
+}
+
+p{
+    margin: 0;
+}
+
+header{
+    height: 10vh;
+}
+
+footer{
+    height: 10vh;
+}
+
