@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+#casa{
+    background-image: url('./img/casa.jpg');
+    width: 1600px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+#luna{
+    position: absolute;
+    width: 135px;
+    top: 285px;
+    left: 697px;
+}
+
+#brujaVolando{
+    position: absolute;
+    width: 100px;
+}
+
+#manoZombie{
+    position: absolute;
+    width: 100px;
+}
+
+#arana{
+    position: absolute;
+    width: 30px;
+    top: 758px;
+    left: 1179px;
+}
+
+#arana:hover{
+    width: 50px;
+    transition: width;
+}

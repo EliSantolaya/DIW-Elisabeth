@@ -1,0 +1,75 @@
+.comic {
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+}
+
+.fila {
+    display: flex;
+}
+
+img {
+    width: 300px;
+}
+
+.f1 .columna1 img:hover{
+    width: 400px;
+    transition: width;}
+
+.f1 .columna2 img{opacity: 1;}
+.f1 .columna2 img:hover{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+
+
+.f2 .columna1 {position: relative;}
+.f2 .columna1 img{
+    position: absolute;
+    left: 0;
+    transition: left ease-in 3s;
+}
+
+.f2 .columna1 img:hover {left: 600px;}
+
+.f2 .columna2 img:hover{
+    scale: 2;
+    transition: scale;
+}
+
+.f2 .columna3 {position: relative;}
+.f2 .columna3 img{
+    position: absolute;
+    bottom: 0}
+
+.f2 .columna3 img:hover {bottom: 600px;}
+
+.f3 {position: relative;}
+.f3 .columna1 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 600px;
+    transition: left ease-out 2s;
+}
+
+.f3 .columna1 img{
+    position: absolute;
+    top: 0;
+    transition: top ease-in 2s;
+}
+
+.f2 .columna1 img:hover{
+    top: 300px;
+}
+
+
+
+
+
+
+
+

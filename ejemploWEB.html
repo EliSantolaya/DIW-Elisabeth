@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web de Zapatillas</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #ff6f61;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        /* Estilos para el carrusel */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Estilos para las tarjetas de productos */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+        }
+
+        .product-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .product-card button {
+            padding: 10px;
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #e65b51;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tienda de Zapatillas</h1>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <!-- Sección de carrusel -->
+        <div class="carousel">
+            <img src="https://via.placeholder.com/500x300" alt="Zapatilla 1">
+        </div>
+
+        <!-- Sección de productos -->
+        <h2>Nuevas Zapatillas</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Zapatilla 1">
+                <h3>Zapatilla 1</h3>
+                <p>$89.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Zapatilla 2">
+                <h3>Zapatilla 2</h3>
+                <p>$79.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Zapatilla 3">
+                <h3>Zapatilla 3</h3>
+                <p>$99.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Zapatilla 4">
+                <h3>Zapatilla 4</h3>
+                <p>$109.99</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Tienda de Zapatillas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
