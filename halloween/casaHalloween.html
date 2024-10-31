@@ -10,10 +10,110 @@
 
 <body>
     <div id="casa">
-        <img id="luna" src="img/luna.png" alt="Luna">
-        <img id="brujaVolando" src="img/brujaVolando.png" alt="Bruja volando"> 
-        <img id="manoZombie" src="img/manoZombie.png" alt="Mano zombie"> 
-        <img id="arana" src="img/arana.png" alt="Araña"> 
+        <div id="lunaBruja">
+            <img id="luna" src="img/luna.png" alt="Luna">
+            <img id="brujaVolando" src="img/brujaVolando.png" alt="Bruja volando">
+            <audio id="sonidoBruja" src="audio/bruja.mp3"></audio>
+        </div>
+        <script>
+            const lunaBruja = document.getElementById('lunaBruja');
+            const sonidoBruja = document.getElementById('sonidoBruja');
+            lunaBruja.addEventListener('mouseover', () => {
+                sonidoBruja.currentTime = 0;
+                sonidoBruja.play();
+            });
+        </script>
+
+        <img id="manoZombie" src="img/manoZombie.png" alt="Mano zombie">
+
+        <img id="chimenea" src="img/chimenea.png" alt="Chimenea">
+        <img id="fantasma" src="img/fantasma.png" alt="Fantasma">
+        <audio id="sonidoFantasma" src="audio/fantasma.mp3"></audio>
+        <script>
+            const fantasmaChimenea = document.getElementById('fantasma');
+            const sonidoFantasma = document.getElementById('sonidoFantasma');
+            fantasmaChimenea.addEventListener('mouseover', () => {
+                sonidoFantasma.currentTime = 0;
+                sonidoFantasma.play();
+            });
+        </script>
+
+        <img id="banderas1" src="img/banderas.png" alt="Banderas">
+        <img id="banderas2" src="img/banderas.png" alt="Banderas">
+        <img id="banderas3" src="img/banderas.png" alt="Banderas">
+        <img id="banderas4" src="img/banderas.png" alt="Banderas">
+        <img id="asesina" src="img/asesina.png" alt="Asesina">
+        <img id="arana" src="img/arana.png" alt="Araña">
+        <img id="tierra" src="img/tierra.png" alt="Montón de tierra">
+
+        <img id="ojo1" src="img/ojo1.png" alt="Ojo uno">
+        <img id="ojo2" src="img/ojo2.png" alt="Ojo dos">
+        <img id="ojo3" src="img/ojo3.png" alt="Ojo tres">
+
+        <img id="ventanaRota" src="img/ventanaRota.png" alt="Ventana rota">
+        <img id="pelota" src="img/pelota.png" alt="Pelota">
+
+        <div id="puertaCompleta">
+            <img id="puertaIzq" src="img/puertaIzq.png" alt="Puerta izquierda">
+            <img id="puertaDer" src="img/puertaDer.png" alt="Puerta derecha">
+            <audio id="sonidoPuerta" src="audio/puerta.mp3"></audio>
+        </div>
+        <script>
+            const puerta = document.getElementById('puertaCompleta');
+            const sonidoPuerta = document.getElementById('sonidoPuerta');
+            puerta.addEventListener('mouseover', () => {
+                sonidoPuerta.currentTime = 0;
+                sonidoPuerta.play();
+            });
+        </script>
+
+        <img id="campana" src="img/campana.png" alt="Campana">
+        <audio id="sonidoCampana" src="audio/campana.mp3"></audio>
+        <script>
+            const campana = document.getElementById('campana');
+            const sonidoCampana = document.getElementById('sonidoCampana');
+            campana.addEventListener('mouseover', () => {
+                sonidoCampana.currentTime = 0;
+                sonidoCampana.play();
+            });
+        </script>
+
+        <div id="calabazaCompleta">
+            <img id="calabaza" src="img/calabaza.png" alt="Calabaza">
+            <img id="ojoCalabazaDer" src="img/ojoCalabaza.png" alt="Ojo derecho de la calabaza">
+            <img id="ojoCalabazaIzq" src="img/ojoCalabaza.png" alt="Ojo izquierdo de la calabaza">
+            <img id="narizCalabaza" src="img/narizCalabaza.png" alt="Nariz de la calabaza">
+            <img id="bocaCalabaza" src="img/bocaCalabaza.png" alt="Boca de la calabaza">
+        </div>
+        <div id="persianaCompleta">
+            <img id="sujecionPersiana" src="img/sujecionPersiana.png" alt="Sujeción de la persiana">
+            <img id="persiana" src="img/persiana.png" alt="Persiana">
+        </div>
+
+        <div id="gato">
+            <img id="gatoAndando" src="img/gatoAndando.png" alt="Gato andando">
+            <img id="gatoEstirado" src="img/gatoEstirado.png" alt="Gato estirado">
+            <audio id="sonidoGato" src="audio/gato.mp3"></audio>
+        </div>
+        <script>
+            const gato = document.getElementById('gato');
+            const sonidoGato = document.getElementById('sonidoGato');
+            gato.addEventListener('mouseover', () => {
+                sonidoGato.currentTime = 0;
+                sonidoGato.play();
+            });
+        </script>
+
+        <div id="buho">
+            <img id="cabezaBuho" src="img/cabezaBuho.png" alt="Cabeza buho">
+            <img id="cuerpoBuho" src="img/cuerpoBuho.png" alt="Cuerpo buho">
+        </div>
+
+        <img id="mujerColgada" src="img/mujerColgada.png" alt="Mujer colgada">
+
+
+        <div id="nombreIzquierda">Elisabeth Santolaya</div>
+        <div id="nombreDerecha">Elisabeth Santolaya</div>
     </div>
 </body>
 

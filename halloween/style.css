@@ -1,10 +1,11 @@
-body{
+body {
     margin: 0;
+    background-color: purple;
 }
 
-#casa{
+#casa {
     background-image: url('./img/casa.jpg');
-    width: 1600px;
+    width: 1400px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
@@ -13,31 +14,387 @@ body{
     position: relative;
 }
 
-#luna{
+
+#luna {
     position: absolute;
     width: 135px;
-    top: 285px;
-    left: 697px;
+    top: 275px;
+    left: 597px;
 }
 
-#brujaVolando{
+#brujaVolando {
     position: absolute;
     width: 100px;
+    top: 285px; 
+    left: 597px; 
+    opacity: 0; 
+    transition: opacity 0.5s ease, transform 1s linear; 
+    transform-origin: 100px 100px; 
 }
 
-#manoZombie{
+#luna:hover + #brujaVolando {
+    opacity: 1;
+    transform: rotate(360deg);
+    transition: opacity 0.5s ease, transform 3s linear;
+}
+
+#chimenea{
     position: absolute;
-    width: 100px;
+    width: 90px;
+    top: 260px;
+    left: 170px;
 }
 
-#arana{
+#fantasma { 
+    position: absolute;
+    width: 60px;
+    top: 290px;
+    left: 190px;
+    opacity: 0; 
+    transition: opacity 0.8s ease, transform 3s ease; 
+}
+
+#chimenea:hover + #fantasma {
+    opacity: 1; 
+    transform: translateX(1000px);
+}
+
+#asesina{
+    position: absolute;
+    width: 70px;
+    top: 295px;
+    left: 95px;
+    opacity: 0;
+}
+
+#asesina:hover{
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+#sujecionPersiana{
+    position: absolute;
+    width: 78px;
+    left: 157px;
+    top: 460px;
+}
+
+#persiana {
+    position: absolute;
+    width: 78px;
+    left: 157px;
+    top: 455px;
+    height: 84px;
+    overflow: hidden;
+    transition: height 2s ease, opacity 2s ease;
+}
+
+#persiana:hover {
+    height: 0; 
+    opacity: 0; 
+}
+
+#pelota {
+    position: absolute;
+    width: 50px;
+    left: 557px;
+    top: 875px;
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.3s ease 0.8s;
+}
+
+#ventanaRota {
+    position: absolute;
+    width: 36px;
+    left: 393px;
+    top: 689px;
+    opacity: 0;
+    transition: opacity 0.1s ease 1.1s; 
+}
+
+#pelota:hover {
+    width: 30px;
+    transform: translate(-160px, -185px);
+    opacity: 0;
+}
+
+#pelota:hover + #ventanaRota {
+    opacity: 1;
+}
+
+
+#puertaCompleta{
+    position: relative;
+}
+
+#puertaIzq {
+    position: absolute;
+    width: 54px;
+    top: 664px;
+    left: 210px;
+    transform-origin: left center; 
+    transform: rotate(0deg); 
+    transition: transform 1s ease; 
+}
+
+#puertaDer {
+    position: absolute;
+    width: 56px;
+    top: 666px;
+    left: 264px;
+    transform-origin: right center; 
+    transform: rotate(0deg); 
+    transition: transform 1s ease; 
+    
+}
+
+#puertaDer:hover, #puertaIzq:hover{
+    transform: rotateY(120deg); 
+}
+
+#campana{
     position: absolute;
     width: 30px;
-    top: 758px;
-    left: 1179px;
+    top: 690px;
+    left: 320px;
+    transition: transform 1s ease-in;
 }
 
-#arana:hover{
+#campana:hover{
+    transform: rotate(-30deg);
+}
+
+#ojo1 {
+    position: absolute;
+    width: 56px;
+    top: 803px;
+    left: 128px;
+    transition: transform 0.2s ease-out;
+}
+
+#ojo1:hover {
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-in;
+}
+
+#ojo2 {
+    position: absolute;
+    width: 74px;
+    top: 833px;
+    left: 270px;
+    transition: transform 1s ease-in;
+}
+
+#ojo2:hover {
+    transform: rotate(130deg);
+}
+
+#ojo3 {
+    position: absolute;
+    width: 108px;
+    top: 755px;
+    left: 1240px;
+    transition: transform 3s ease-in-out;
+}
+
+#ojo3:hover {
+    transform: rotate(1800deg);
+}
+
+#gato{
+    position: relative;
+}
+
+#gatoAndando, #gatoEstirado {
+    position: absolute;
+    width: 100px;
+    top: 760px;
+    left: 402px;
+    rotate: 5deg;
+    transition: opacity 0.3s ease;
+}
+
+#gatoEstirado {
+    opacity: 0;
+}
+
+#gato:hover #gatoAndando {
+    opacity: 0;
+}
+
+#gato:hover #gatoEstirado {
+    opacity: 1;
+}
+
+
+#buho {
+    position: relative;
+}
+
+#cabezaBuho {
+    position: absolute;
+    width: 32px;
+    top: 354px;
+    left: 1010px;
+    transition: top 2s ease, transform 2s ease; 
+    transform-origin: center; 
+}
+
+#cuerpoBuho {
+    position: absolute;
     width: 50px;
-    transition: width;
+    top: 380px;
+    left: 990px;
+}
+
+#buho:hover #cabezaBuho {
+    top: 900px; 
+    transform: rotate(360deg); 
+}
+
+
+
+
+
+#manoZombie {
+    position: absolute;
+    width: 54px; 
+    left: 860px; 
+    top: 829px; 
+    transition: top 1.5s ease;
+}
+
+#manoZombie:hover {
+    top: 811px;
+}
+
+#tierra {
+    position: absolute;
+    width: 60px; 
+    top: 837px; 
+    left: 857px; 
+}
+
+
+
+#calabaza {
+    position: absolute;
+    width: 305px;
+    top: 645px;
+    left: 875px;
+}
+
+#bocaCalabaza, 
+#narizCalabaza,
+#ojoCalabazaIzq,
+#ojoCalabazaDer {
+    position: absolute;
+    width: 305px;
+    display: none; 
+}
+
+#bocaCalabaza,
+#narizCalabaza {
+    right: 219px;
+    top: 646px;
+}
+
+#ojoCalabazaIzq {
+    right: 219px;
+    top: 644px;
+}
+
+#ojoCalabazaDer {
+    right: 90px;
+    top: 658px;
+}
+
+#calabazaCompleta:hover #ojoCalabazaIzq,
+#calabazaCompleta:hover #ojoCalabazaDer,
+#calabazaCompleta:hover #narizCalabaza,
+#calabazaCompleta:hover #bocaCalabaza {
+    display: block; 
+}
+
+#arana {
+    position: absolute;
+    width: 30px;
+    top: 766px;
+    left: 1075px;
+    transition: width 1s ease;
+    z-index: 1;
+}
+
+#arana:hover {
+    width: 50px;
+}
+
+#mujerColgada {
+    position: absolute;
+    width: 70px;
+    top: 251px;
+    left: 1300px;
+    transition: transform 2s ease-in;
+}
+
+#mujerColgada:hover{
+    transform: rotate(5deg);
+}
+
+
+#banderas1{
+    position: absolute;
+    width: 150px;
+    top: 350px;
+    left: 313px;
+}
+
+#banderas2{
+    position: absolute;
+    width: 150px;
+    top: 615px;
+    left: 37px;
+}
+
+#banderas3{
+    position: absolute;
+    width: 150px;
+    top: 615px;
+    left: 187px;
+}
+
+#banderas4{
+    position: absolute;
+    width: 150px;
+    top: 615px;
+    left: 337px;
+}
+
+
+
+
+
+
+
+
+#nombreIzquierda, #nombreDerecha {
+    position: fixed;
+    font-size: 24px; 
+    font-family: Arial, sans-serif;
+    color: white; 
+    transform: rotate(-90deg); 
+    white-space: nowrap;
+    z-index: 10; 
+}
+
+#nombreIzquierda {
+    top: 50%;
+    left: 50px; 
+    transform-origin: left center;
+}
+
+#nombreDerecha {
+    top: 50%;
+    right: 50px;
+    transform-origin: right center;
 }
