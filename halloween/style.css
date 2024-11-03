@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: purple;
+    background-color: #8a4ead;
 }
 
 #casa {
@@ -94,6 +94,10 @@ body {
     opacity: 0; 
 }
 
+#ventanaCompleta {
+    position: relative;
+}
+
 #pelota {
     position: absolute;
     width: 50px;
@@ -109,16 +113,16 @@ body {
     left: 393px;
     top: 689px;
     opacity: 0;
-    transition: opacity 0.1s ease 1.1s; 
+    transition: opacity 0.1s ease 1.1s;
 }
 
-#pelota:hover {
+#ventanaCompleta:hover #pelota {
     width: 30px;
     transform: translate(-160px, -185px);
     opacity: 0;
 }
 
-#pelota:hover + #ventanaRota {
+#ventanaCompleta:hover #ventanaRota {
     opacity: 1;
 }
 
@@ -259,22 +263,21 @@ body {
 #manoZombie {
     position: absolute;
     width: 54px; 
-    left: 860px; 
-    top: 829px; 
+    left: 760px; 
+    top: 815px; 
     transition: top 1.5s ease;
 }
 
 #manoZombie:hover {
-    top: 811px;
+    top: 800px;
 }
 
 #tierra {
     position: absolute;
     width: 60px; 
-    top: 837px; 
-    left: 857px; 
+    top: 820px; 
+    left: 757px;
 }
-
 
 
 #calabaza {
@@ -380,9 +383,9 @@ body {
 #nombreIzquierda, #nombreDerecha {
     position: fixed;
     font-size: 24px; 
-    font-family: Arial, sans-serif;
-    color: white; 
-    transform: rotate(-90deg); 
+    font-family: 'Creepster', cursive; 
+    color: #4e0578;  
+    text-shadow: 2px 2px 5px black;
     white-space: nowrap;
     z-index: 10; 
 }
@@ -391,10 +394,13 @@ body {
     top: 50%;
     left: 50px; 
     transform-origin: left center;
+    transform: rotate(-90deg); 
+
 }
 
 #nombreDerecha {
     top: 50%;
     right: 50px;
     transform-origin: right center;
+    transform: rotate(90deg); 
 }

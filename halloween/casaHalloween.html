@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -50,8 +51,21 @@
         <img id="ojo2" src="img/ojo2.png" alt="Ojo dos">
         <img id="ojo3" src="img/ojo3.png" alt="Ojo tres">
 
-        <img id="ventanaRota" src="img/ventanaRota.png" alt="Ventana rota">
-        <img id="pelota" src="img/pelota.png" alt="Pelota">
+        <div id="ventanaCompleta">
+            <img id="ventanaRota" src="img/ventanaRota.png" alt="Ventana rota">
+            <img id="pelota" src="img/pelota.png" alt="Pelota">
+            <audio id="sonidoVentana" src="audio/cristal.mp3"></audio>
+        </div>
+        <script>
+            const ventana = document.getElementById('pelota');
+            const sonidoCristal = document.getElementById('sonidoVentana');
+            ventana.addEventListener('mouseover', () => {
+                sonidoCristal.currentTime = 0;
+                setTimeout(() => {
+                    sonidoCristal.play();
+                }, 1000)
+            });
+        </script>
 
         <div id="puertaCompleta">
             <img id="puertaIzq" src="img/puertaIzq.png" alt="Puerta izquierda">
@@ -88,7 +102,16 @@
         <div id="persianaCompleta">
             <img id="sujecionPersiana" src="img/sujecionPersiana.png" alt="Sujeción de la persiana">
             <img id="persiana" src="img/persiana.png" alt="Persiana">
+            <audio id="sonidoPayaso" src="audio/payaso.mp3"></audio>
         </div>
+        <script>
+            const payaso = document.getElementById('persiana');
+            const sonidoPayaso = document.getElementById('sonidoPayaso');
+            payaso.addEventListener('mouseover', () => {
+                sonidoPayaso.currentTime = 0;
+                sonidoPayaso.play();
+            });
+        </script>
 
         <div id="gato">
             <img id="gatoAndando" src="img/gatoAndando.png" alt="Gato andando">
