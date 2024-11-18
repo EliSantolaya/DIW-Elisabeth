@@ -256,10 +256,6 @@ body {
     transform: rotate(360deg); 
 }
 
-
-
-
-
 #manoZombie {
     position: absolute;
     width: 54px; 
@@ -372,13 +368,6 @@ body {
     top: 615px;
     left: 337px;
 }
-
-
-
-
-
-
-
 
 #nombreIzquierda, #nombreDerecha {
     position: fixed;

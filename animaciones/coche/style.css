@@ -1,0 +1,461 @@
+/* General styles */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#fondo {
+  background-image: url('./img/fondo.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*Sol*/
+#solDestello {
+  position: absolute;
+  top: 33px;
+  left: 942px;
+  width: 135px;
+  height: 134px;
+  background-image: url('img/sol.png');
+  background-size: cover; 
+  z-index: 4;
+}
+#solCirculo {
+  position: absolute;
+  top: 50px;
+  left: 60%;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  animation: cambiarColorSol 10s infinite;
+}
+@keyframes cambiarColorSol {
+  0% {
+    background-color: yellow;
+  }
+
+  25% {
+    background-color: lightyellow;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  75% {
+    background-color: darkorange;
+  }
+
+  100% {
+    background-color: red;
+  }
+}
+
+/*Coches*/
+.coche {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  width: 400px;
+  height: 180px;
+  background-image: url(img/coche1.png);
+  background-size: cover;
+  animation-name: mover-coche;
+  animation-duration: 8s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  z-index: 1;
+}
+.cocheAccidente {
+  position: absolute;
+  bottom: 180px;
+  left: 870px;
+  width: 450px;
+  height: 200px;
+  background-image: url('img/coche2.png');
+  background-size: cover;
+  opacity: 0;
+  z-index: 2;
+  animation-name: cambiar-imagen;
+  animation-duration: 1s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+@keyframes mover-coche {
+  0% {
+    left: 0%;
+  }
+
+  10% {
+    left: 10%;
+    transform: rotate(-10deg);
+  }
+
+  12% {
+    left: 11%;
+    transform: rotate(10deg);
+  }
+
+  14% {
+    left: 12%;
+    transform: rotate(-10deg);
+  }
+
+  16% {
+    left: 13%;
+    transform: rotate(10deg);
+  }
+
+  20% {
+    left: 20%;
+    transform: rotate(0deg);
+  }
+
+  to {
+    left: 55%;
+  }
+}
+@keyframes cambiar-imagen {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Piedras*/
+.piedra1 {
+  position: absolute;
+  bottom: 150px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  background-image: url('img/piedra.png');
+  background-size: cover;
+}
+.piedra2 {
+  position: absolute;
+  bottom: 250px;
+  left: 400px;
+  width: 50px;
+  height: 50px;
+  background-image: url('img/piedra.png');
+  background-size: cover;
+}
+.piedra3 {
+  position: absolute;
+  bottom: 210px;
+  left: 360px;
+  width: 70px;
+  height: 70px;
+  background-image: url('img/piedra.png');
+  background-size: cover;
+}
+.piedra4 {
+  position: absolute;
+  bottom: 205px;
+  left: 420px;
+  width: 80px;
+  height: 80px;
+  background-image: url('img/piedra.png');
+  background-size: cover;
+}
+
+/* Troncos */
+.tronco {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url('img/tronco.png');
+  background-size: cover;
+  z-index: 3;
+  animation-name: rodar-tronco;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes rodar-tronco {
+  0% {
+    transform: rotate(5deg) translateX(0);
+  }
+
+  25% {
+    transform: rotate(10deg) translateX(10%);
+  }
+
+  50% {
+    transform: rotate(15deg) translateX(20%);
+  }
+
+  75% {
+    transform: rotate(20deg) translateX(30%);
+  }
+
+  100% {
+    transform: rotate(25deg) translateX(40%);
+  }
+}
+#tronco1 {
+  bottom: 100px;
+  left: 1120px;
+  animation-delay: 8s;
+}
+#tronco2 {
+  bottom: 100px;
+  left: 1200px;
+  animation-delay: 8s;
+}
+#tronco3 {
+  bottom: 150px;
+  left: 1160px;
+  animation-delay: 8s;
+}
+
+/*Humo*/
+.humo {
+  position: absolute;
+  bottom: 280px;
+  left: 400px;
+  width: 200px;
+  height: 200px;
+  background-image: url('img/humo.gif');
+  background-size: cover;
+  opacity: 0;
+  z-index: 2;
+  animation: humo-aparece 10s linear;
+}
+@keyframes humo-aparece {
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(200px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(350px);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateX(750px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(850px);
+  }
+}
+
+/*Pajaros*/
+.pajaro {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('img/pajaro.gif');
+  background-size: cover;
+  animation: vuelo-pajaro 5s linear infinite;
+}
+#pajaro1 {
+  top: 20px;
+  left: 0;
+  animation-delay: 0s;
+}
+#pajaro2 {
+  top: 70px;
+  left: -50px;
+  animation-delay: 3s;
+}
+@keyframes vuelo-pajaro {
+  0% {
+    left: -50px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/*Explosion*/
+.explosion {
+  position: absolute;
+  bottom: 200px;
+  left: 1100px; 
+  width: 350px;
+  height: 250px;
+  background-image: url('img/explosion.gif'); 
+  background-size: cover;
+  opacity: 0;
+  z-index: 3;
+  animation: explosion-aparece 1s forwards; 
+  animation-delay: 8s;
+}
+@keyframes explosion-aparece {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/*Fuego*/
+.fuego {
+  position: absolute;
+  bottom: 200px;
+  left: 1250px;
+  width: 150px;
+  height: 150px;
+  background-image: url('img/fuego.gif'); 
+  background-size: cover;
+  opacity: 0;
+  z-index: 3;
+  animation: fuego-aparece 3s forwards;
+  animation-delay: 9s; 
+}
+@keyframes fuego-aparece {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*Montones de tierra*/
+.tierra {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-image: url('img/tierra.png');
+  background-size: cover;
+  bottom: 25px;
+  z-index: 1;
+}
+#tierra1 {
+  left: 24%;
+}
+#tierra2 {
+  left: 69%;
+}
+
+/*Topos*/
+.topo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('img/topo.png');
+  background-size: cover;
+  bottom: 50px;
+  animation: movimiento-topo 3s ease-in-out infinite;
+}
+#topo1 {
+  left: 25%;
+}
+#topo2 {
+  left: 70%;
+  animation-delay: 1.5s;
+}
+@keyframes movimiento-topo {
+
+  0%,
+  100% {
+    transform: translateY(50%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+/* Camión de bomberos */
+.camion {
+  position: absolute;
+  bottom: 60px;
+  left: -500px; 
+  width: 500px;
+  height: 500px;
+  background-image: url('img/camion.png');
+  background-size: cover;
+  opacity: 0; 
+  animation: mover-camion 5s forwards; 
+  animation-delay: 9s; 
+  z-index: 5;
+}
+@keyframes mover-camion {
+  0% {
+    left: -500px; 
+    opacity: 0;
+  }
+  20% {
+    left: 10%; 
+    opacity: 0.5; 
+  }
+  50% {
+    left: 20%; 
+    opacity: 1;
+  }
+  100% {
+    left: 29%;
+    opacity: 1; 
+  }
+}
+
+/*Bombero*/
+.bombero {
+  position: absolute;
+  bottom: 50px;
+  left: 250px; 
+  width: 250px; 
+  height: 300px;
+  background-image: url('img/bombero.png'); 
+  background-size: cover;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+  z-index: 6;
+}
+
+.camion:hover .bombero {
+  opacity: 1; 
+}
+
+/* Chorro de agua */
+.agua {
+  position: absolute;
+  bottom: 50px;
+  left: 130px;  
+  width: 550px; 
+  height: 500px;
+  background-image: url('img/agua.gif'); 
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.bombero:hover .agua {
+  opacity: 1;
+}
