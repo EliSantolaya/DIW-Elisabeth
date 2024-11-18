@@ -15,10 +15,28 @@
       <div class="sol" id="solDestello"></div>
       <div class="pajaro" id="pajaro1"></div>
       <div class="pajaro" id="pajaro2"></div>
+      <audio id="audioPajaros" src="audio/pajaros.mp3"></audio>
+      <script>
+        setTimeout(function () {
+          document.getElementById('audioPajaros').play();
+        }, 0);  
+      </script>
     </div>
     <div class="suelo">
       <div class="coche"></div>
+      <audio id="audioGrito" src="audio/grito.mp3"></audio>
+      <script>
+        setTimeout(function () {
+          document.getElementById('audioGrito').play();
+        }, 5000);  
+      </script>
       <div class="cocheAccidente"></div>
+      <audio id="audioCoche" src="audio/coche.mp3"></audio>
+      <script>
+        setTimeout(function () {
+          document.getElementById('audioCoche').play();
+        }, 0);  
+      </script>
       <div class="piedras">
         <div class="piedra1"></div>
         <div class="piedra2"></div>
@@ -31,14 +49,61 @@
       <div class="tronco" id="tronco3"></div>
       <div class="explosion"></div>
       <div class="fuego"></div>
+      <audio id="audioFuego" src="audio/fuego.mp3"></audio>
+      <script>
+        setTimeout(function () {
+          document.getElementById('audioFuego').play();
+        }, 8000);  
+      </script>
       <div class="tierra" id="tierra1"></div>
       <div class="tierra" id="tierra2"></div>
       <div class="topo" id="topo1"></div>
       <div class="topo" id="topo2"></div>
       <div class="camion">
-        <div class="bombero">
+        <div class="bombero" id="bombero">
           <div class="agua"></div>
         </div>
+      
+      <audio id="audioBomberos" src="audio/bomberos.mp3"></audio>
+      <script>
+        setTimeout(function () {
+          document.getElementById('audioBomberos').play();
+        }, 11000);  
+      </script>
+      <audio id="audioAgua" src="audio/agua.mp3"></audio>
+      <script>
+        const bombero = document.getElementById('bombero');
+        const audioAgua = document.getElementById('audioAgua');
+        bombero.addEventListener('mouseover', () => {
+          audioAgua.currentTime = 0;
+          audioAgua.play();
+          setTimeout(() => {
+            audioAgua.pause();
+          }, 2000);
+        });
+      </script>
+      </div>
+      <div class="cocheDePolicia">
+        <div class="policia" id="policia"></div>
+
+        <audio id="audioPolicia" src="audio/policia.mp3"></audio>
+        <script>
+          setTimeout(function () {
+            document.getElementById('audioPolicia').play();
+          }, 20000);  
+        </script>
+        <audio id="audioSilbato" src="audio/silbato.mp3"></audio>
+        <script>
+          const policia = document.getElementById('policia');
+          const audioSilbato = document.getElementById('audioSilbato');
+          policia.addEventListener('mouseover', () => {
+            audioSilbato.currentTime = 0;
+            audioSilbato.play();
+            setTimeout(() => {
+              audioAgua.pause();
+            }, 2000);
+          });
+        </script>
       </div>
       <div class="hormiguero"></div>
       <div class="hormiga" id="hormiga1"></div>
@@ -46,7 +111,6 @@
       <div class="hormiga" id="hormiga3"></div>
       <div class="hormiga" id="hormiga4"></div>
       <div class="hormiga" id="hormiga5"></div>
-
     </div>
   </div>
 </body>
