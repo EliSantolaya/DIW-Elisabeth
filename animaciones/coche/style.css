@@ -33,7 +33,7 @@ body {
   height: 100px;
   background-color: yellow;
   border-radius: 50%;
-  animation: cambiarColorSol 10s infinite;
+  animation: cambiarColorSol 10s;
 }
 @keyframes cambiarColorSol {
   0% {
@@ -403,7 +403,7 @@ body {
   background-size: cover;
   opacity: 0; 
   animation: mover-camion 5s forwards; 
-  animation-delay: 9s; 
+  animation-delay: 12s; 
   z-index: 5;
 }
 @keyframes mover-camion {
@@ -438,7 +438,6 @@ body {
   transition: opacity 0.5s ease-in-out;
   z-index: 6;
 }
-
 .camion:hover .bombero {
   opacity: 1; 
 }
@@ -455,7 +454,31 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out; 
 }
-
 .bombero:hover .agua {
   opacity: 1;
+}
+
+/*Hormiguero*/
+.hormiguero{
+  position: absolute;
+  background-image: url('img/hormiguero.png');
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  bottom: 300px;
+  z-index: 0;
+  left: 100px;
+}
+
+/*Hormigas*/
+.hormiga{
+  position: absolute;
+  background-image: url('img/hormiga.png');
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  bottom: 300px;
+  z-index: 0;
+  left: 130px;
+  opacity: 0;
 }
