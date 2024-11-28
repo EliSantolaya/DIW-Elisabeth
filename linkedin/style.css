@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  color: grey;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.barra-superior .logo {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #005fa3;
+}
+
+.barra-superior .logo img {
+  width: 80px;
+  margin-left: -10px;
+}
+
+.barra-superior .opciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.barra-superior .opciones a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.barra-superior .opciones a img.icono {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+.barra-superior .botones {
+  display: flex;
+  gap: 10px;
+}
+
+.botones .btn-unirseahora, .botones .btn-iniciarsesion {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.botones .btn-unirseahora {
+  background-color: white;
+  color: grey;
+  border: 1px solid white;
+}
+
+.botones .btn-iniciarsesion {
+  background-color: white;
+  color: #0073b1;
+  border: 1px solid #0073b1;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+}
+
+.columna-izquierda {
+  flex: 1 1 350px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-portada img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+}
+
+.informacion-perfil {
+  margin-top: -80px;
+  padding: 20px;
+}
+
+.foto-perfil {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: -5%;
+  border: 5px solid white;
+}
+
+.detalles-perfil h2 {
+  margin: 10px 0 5px;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+.detalles-perfil p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.detalles-perfil a {
+  color: #0073b1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.detalles-perfil img {
+  margin-top: 0px;
+  width: 100px;
+}
+
+.botones {
+  margin-top: 15px;
+  padding: 20px;
+}
+
+.botones .btn-primario {
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.botones .btn-secundario {
+  background-color: white;
+  color: #0073b1;
+  border: 1px solid #0073b1;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.columna-derecha {
+  padding: 20px;
+}
+
+.cursos h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.curso {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.curso img {
+  height: 80px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.curso p {
+  color: grey;
+  margin: 0;
+  font-size: 20px;
+}
+
+.curso p strong {
+  display: block;
+}
+.botones {
+  display: flex; 
+  gap: 10px;
+}
+
+.botones .btn-primario, .botones .btn-secundario {
+  display: flex; 
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.botones .btn-secundario img.icono {
+  width: 20px; 
+  margin-right: 10px;
+}
+
+.btn-verTodosLosCursos{
+  color: #0073b1;
+  border: 1px solid #0073b1;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 20px;
+}

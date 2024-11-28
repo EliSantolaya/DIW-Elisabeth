@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    background-color: cornflowerblue;
+}
+
+.cartas {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila1, .fila2{
+    margin: 0;
+    display: flex;
+}
+
+.carta {
+    width: 300px; 
+    height: 417px;
+    background-size: cover;
+}
+
+.carta div{
+    transition: all 1s;
+}
+
+.carta .anverso{
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.carta .reverso{
+    z-index: 10;
+    transform: rotateY(0deg);
+}
+
+.carta:hover .anverso{
+    transform: rotateY(0deg);
+    z-index: 10;
+}
+
+.carta:hover .reverso{
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.carta div {
+    width: 300px;
+    height: 417px;
+    background-size: cover;
+    position: absolute;
+}
+
+
+
+/*Mewtwo*/
+.mewtwo .anverso{
+    background-image: url("./img/mewtwo.png");
+}
+
+/*Articuno*/.articuno .anverso{
+    background-image: url("./img/articuno.png");
+}
+
+/*Pikachu*/
+.pikachu .anverso{
+    background-image: url("./img/pikachu.png");
+}
+
+/*Charizar*/
+.charizar .anverso{
+    background-image: url("./img/charizard.png");
+}
+
+/*Gardevoir*/
+.gardevoir .anverso{
+    background-image: url("./img/gardevoir.png");
+}
+
+/*Greninja*/
+.greninja .anverso{
+    background-image: url("./img/greninja.png");
+}
+
+/*Moltres*/
+.moltres .anverso{
+    background-image: url("./img/moltres.png");
+}
+
+/*Venusaur*/
+.venusaur .anverso{
+    background-image: url("./img/venusaur.png");
+}
+
+
+.reverso{
+    background-image: url("./img/reverso.png");
+}
+
+
+
+
+
+
+
