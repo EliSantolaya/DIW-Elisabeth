@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="espacio">
+    <div id="fondo" class="espacio">
         <div class="neptuno">
             <img src="img/neptuno.png" alt="Planeta neptuno">
         </div>
@@ -30,11 +30,82 @@
         </div>
         <div class="naveEspacial2">
             <img src="img/naveEspacial2.png" alt="Segunda nave espacial">
+            <div class="laser">
+                <img src="img/laser.gif" alt="">
+            </div>
         </div>
-
         <div class="naveFondo"></div>
-        <div class=""></div>
+        <div class="palanca1">
+            <img src="img/palanca1.png" alt="Palanca 1" />
+        </div>
+        <div class="palanca2">
+            <img src="img/palanca2.png" alt="Palanca 2" />
+        </div>
+        <audio id="audioViajeEspacio">
+            <source src="audio/viajeEspacio.mp3" type="audio/mp3">
+        </audio>
     </div>
+
+    <audio id="audio" autoplay loop>
+        <source src="audio/naveInterior.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audioMeteorito">
+        <source src="audio/meteorito.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audioLaser">
+        <source src="audio/laser.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        window.addEventListener('load', () => {
+            const audioLaser = document.getElementById('audioLaser');
+
+            setTimeout(() => {
+                audioLaser.play();
+            }, 2000);
+        });
+
+        const palanca2 = document.querySelector('.palanca2 img');
+        const fondo = document.getElementById('fondo');
+        const elementos = document.querySelectorAll('.neptuno, .circuloAsteroides, .marte, .satelite, .meteorito, .naveEspacial1, .naveEspacial2');
+        const audioViajeEspacio = document.getElementById('audioViajeEspacio');
+
+        let audioReproduciendo = false;
+
+        function activarTunel() {
+            fondo.classList.remove('espacio');
+            fondo.classList.add('tunel');
+            elementos.forEach(elemento => {
+                elemento.style.display = 'none';
+            });
+            if (!audioReproduciendo) {
+                audioViajeEspacio.play();
+                audioReproduciendo = true;
+            }
+        }
+
+        function volverAlEspacio() {
+            fondo.classList.remove('tunel');
+            fondo.classList.add('espacio');
+            elementos.forEach(elemento => {
+                elemento.style.display = 'block';
+            });
+            if (audioReproduciendo) {
+                audioViajeEspacio.pause();
+                audioViajeEspacio.currentTime = 0;
+                audioReproduciendo = false;
+            }
+        }
+
+        palanca2.addEventListener('click', () => {
+            if (fondo.classList.contains('tunel')) {
+                volverAlEspacio();
+            } else {
+                activarTunel();
+            }
+        });
+    </script>
+
 </body>
 
 </html>

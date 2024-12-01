@@ -1,126 +1,289 @@
-body{
+html,
+body {
+    overflow: hidden;
     margin: 0;
 }
 
-.espacio{
+.espacio {
     background-image: url('img/espacio.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-position: 0 0;
+    animation: moverEstrellas 10s linear infinite;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    transition: background-image 0.5s ease;
+}
+
+@keyframes moverEstrellas {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+.tunel {
     position: relative;
     width: 100%;
     height: 100vh;
     z-index: 0;
 }
 
-/*Planetas*/
-/*Neptuno*/
-.neptuno{
+.tunel::before {
+    content: '';
     position: absolute;
-    top: 4%;
-    right: 2%;
-    z-index: 1;
-}
-.neptuno img{    
-    width: 18vw;
-    height: 28vh;
-}
-
-/*Marte*/
-.marte{
-    position: absolute;
-    top: 16%;
-    left: 0%;
-    z-index: 1;
-}
-.marte img{    
-    width: 38vw;
-    height: 63vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/tunel.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    animation: moverYGirarFondo 3s linear infinite;
 }
 
-/*Satélite*/
-.satelite{
-    position: absolute;
-    top: 4%;
-    left: 0%;
-    z-index: 1;
-    transform-style: preserve-3d; 
-    animation: spin 5s infinite linear; 
-}
-
-.satelite img{
-    width: 14vw;
-    height: 24vh;
-}
-
-@keyframes spin {
-    from {
-        transform: rotateX(360deg);
-        transform: rotateZ(180deg);
+@keyframes moverYGirarFondo {
+    0% {
+        transform: rotate(0deg) scale(2);
     }
-    to {
-        transform: rotateX(0deg);
-        transform: rotateZ(0deg);
-        
+    50% {
+        transform: rotate(180deg) scale(3);
+    }
+    100% {
+        transform: rotate(360deg) scale(4);
     }
 }
 
-/*Asteroides*/
-/*Circulo de astetorides*/
-.circuloAsteroides{
-    position: absolute;
-    top: 15%;
-    right: 0%;
-    z-index: 1;
-}
-.circuloAsteroides img{    
-    width: 27vw;
-    height: 10vh;
-}
-
-/*Meteorito -> hacer que aparezca y se choque con marte*/
-.meteorito{
-    position: absolute;
-    top: -25%;
-    right: 20%;
-    z-index: 1;
-}
-.meteorito img{
-    width: 20vw;
-    height: 15vh;
-    transform: rotate(130deg);
-}
-
-/*Naves espaciales*/
-/*Nave espacial 1*/
-.naveEspacial1{
-    position: absolute;
-    top: 15%;
-    right: 30%;
-    z-index: 1;
-}
-.naveEspacial1 img{    
-    width: 18vw;
-    height: 28vh;
-}
-
-/*Nave espacial 2*/
-.naveEspacial2{
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    z-index: 1;
-}
-.naveEspacial2 img{    
-    width: 26vw;
-    height: 29vh;
-}
-
-.naveFondo{
-    background-image: url('img/fondo2.png');
+.naveFondo {
+    background-image: url('img/cabina.png');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
     height: 100vh;
     z-index: 1;
+}
+
+.palanca1 img {
+    position: absolute;
+    top: 72%;
+    left: 44%;
+    z-index: 2;
+    height: 10vh;
+    cursor: pointer;
+}
+
+.palanca2 img {
+    position: absolute;
+    top: 72%;
+    right: 39%;
+    z-index: 2;
+    height: 10vh;
+    cursor: pointer;
+}
+
+.palanca2 img:hover {
+    transform: scale(1.5);
+}
+
+.neptuno,
+.marte,
+.satelite,
+.circuloAsteroides,
+.meteorito,
+.naveEspacial1,
+.naveEspacial2 {
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neptuno {
+    top: 4%;
+    right: 2%;
+    animation: rotar 40s linear infinite;
+}
+
+.neptuno img {
+    width: 18vw;
+    height: 28vh;
+    transform-origin: center;
+}
+
+.marte {
+    top: 16%;
+    left: 0%;
+    animation: rotar 60s linear infinite;
+}
+
+.marte img {
+    width: 30vw;
+    height: 53vh;
+    transform-origin: center;
+}
+
+.satelite {
+    top: 4%;
+    left: 0%;
+    animation: giroSatelite 20s infinite linear;
+}
+
+.satelite img {
+    width: 14vw;
+    height: 24vh;
+}
+
+@keyframes giroSatelite {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(60deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.circuloAsteroides {
+    top: 15%;
+    right: 0%;
+    animation: giroSatelite 50s infinite linear;
+}
+
+.circuloAsteroides img {
+    width: 27vw;
+    height: 10vh;
+    transform-origin: center;
+}
+
+.meteorito {
+    top: -25%;
+    right: 20%;
+    animation: caidaMeteorito 5s ease-in-out forwards, desaparecer 5s ease-in-out forwards;
+}
+
+.meteorito img {
+    width: 20vw;
+    height: 15vh;
+    transform: rotate(130deg);
+}
+
+@keyframes caidaMeteorito {
+    0% {
+        top: -25%;
+        right: 20%;
+    }
+    100% {
+        top: 40%;
+        right: 60%;
+    }
+}
+
+@keyframes desaparecer {
+    0%, 95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.naveEspacial1 {
+    top: 1%;
+    right: 110%;
+    animation: recorrido1 10s linear 1s 2 normal forwards;
+}
+
+.naveEspacial1 img {
+    width: 8vw;
+    height: 18vh;
+}
+
+.naveEspacial2 {
+    top: 15%;
+    left: -15%;
+    animation: seguirNave1 12s linear 1s 2 normal forwards;
+}
+
+.naveEspacial2 img {
+    width: 16vw;
+    height: 19vh;
+}
+
+.laser {
+    position: absolute;
+    top: 43%;
+    left: 70%;
+    width: 5vw;
+    height: auto;
+}
+
+.laser img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes recorrido1 {
+    0% {
+        top: 1%;
+        right: 110%;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 20%;
+        right: 70%;
+        transform: rotate(35deg);
+    }
+    50% {
+        top: 50%;
+        right: 50%;
+        transform: rotate(50deg);
+    }
+    75% {
+        top: 60%;
+        right: 20%;
+    }
+    100% {
+        top: 40%;
+        right: -10%;
+    }
+}
+
+@keyframes seguirNave1 {
+    0% {
+        top: 15%;
+        left: -15%;
+    }
+    25% {
+        top: 20%;
+        left: 10%;
+    }
+    50% {
+        top: 50%;
+        left: 25%;
+    }
+    75% {
+        top: 60%;
+        left: 60%;
+    }
+    100% {
+        top: 40%;
+        left: 110%;
+    }
 }
