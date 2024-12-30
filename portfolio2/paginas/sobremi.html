@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí - Elisabeth Santolaya</title>
+    <!-- Estilos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Fuentes de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../estilos/estiloSobreMi.css">
+</head>
+
+<body>
+    <header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="inicio.html" class="logo">
+                <img src="../img/logoRosaSinNombre.png" alt="Logotipo" class="img-fluid" style="height: 50px;">
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="../paginas/sobremi.html">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../paginas/formacion.html">Formación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../paginas/experiencia.html">Experiencia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../paginas/proyectos.html">Proyectos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about py-5">
+        <div class="container">
+            <!-- Sección Introducción -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Sobre mí</h1>
+                    <p class="lead">Soy <strong>Elisabeth Santolaya</strong>, una desarrolladora apasionada por el
+                        diseño
+                        y el desarrollo de soluciones tecnológicas. Me especializo en aplicaciones multiplataforma y
+                        diseño
+                        web con WordPress.</p>
+                    <p class="text-muted">Mi objetivo es transformar ideas complejas en soluciones funcionales que
+                        conecten
+                        con las personas. La innovación, el diseño y la experiencia del usuario son mis prioridades.</p>
+                    <a href="../archivos/CV_ElisabethSantolaya.pdf" class="btn btn-primary mt-3" target="_blank">
+                        <i class="fa-solid fa-eye me-2"></i> Ver CV
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="../img/perfil1.png" alt="Mi Foto" class="img-fluid rounded shadow-lg"
+                        style="max-width: 50%; border-radius: 20px;">
+                </div>
+            </div>
+
+            <!-- Sección de Datos destacados -->
+            <div class="row text-center py-5 bg-light rounded-3 shadow-lg">
+                <div class="col-md-4 mb-4">
+                    <h3 class="display-5">1+</h3>
+                    <p>Años de experiencia</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="display-5">3+</h3>
+                    <p>Proyectos completados</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="display-5">6+</h3>
+                    <p>Tecnologías dominadas</p>
+                </div>
+            </div>
+
+            <!-- Sección de habilidades y aptitudes en dos columnas -->
+            <div class="row">
+                <!-- Sección de habilidades (Columna izquierda) -->
+                <div class="col-md-6">
+                    <div class="skills-cards">
+                        <h2 class="fw-bold text-center mb-4">Mis habilidades</h2>
+                        <div class="card-container">
+                            <div class="skill-card active">
+                                <i class="fa-brands fa-js-square"></i>
+                                <h3>JavaScript</h3>
+                                <p>Lenguaje de programación dinámico utilizado principalmente para crear funcionalidades
+                                    interactivas en sitios web.</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-wordpress"></i>
+                                <h3>WordPress</h3>
+                                <p>CMS popular para crear sitios web profesionales y gestionarlos fácilmente.</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                <h3>Responsive Design</h3>
+                                <p>Diseño adaptable a diferentes tamaños de pantalla para mejorar la experiencia del
+                                    usuario.
+                                </p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-brands fa-angular"></i>
+                                <h3>Angular</h3>
+                                <p>Bibliotecas y herramientas para construir interfaces modernas y aplicaciones del lado
+                                    del
+                                    servidor.</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fa-solid fa-pencil-ruler"></i>
+                                <h3>UI/UX Design</h3>
+                                <p>Diseño centrado en el usuario para crear experiencias visuales atractivas e
+                                    intuitivas.</p>
+                            </div>
+                        </div>
+                        <div class="navigation-buttons text-center mt-4">
+                            <button id="prev" class="btn btn-secondary me-2">&lt; Anterior</button>
+                            <button id="next" class="btn btn-secondary">Siguiente &gt;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de aptitudes (Columna derecha) -->
+                <div class="col-md-6">
+                    <div class="aptitudes-cards">
+                        <h2 class="fw-bold text-center mb-4">Mis aptitudes</h2>
+                        <div class="card-container">
+                            <div class="aptitude-card active">
+                                <i class="fa-solid fa-brain"></i>
+                                <h3>Creatividad</h3>
+                                <p>Habilidad para generar ideas innovadoras y soluciones fuera de lo común.</p>
+                            </div>
+                            <div class="aptitude-card">
+                                <i class="fa-solid fa-users"></i>
+                                <h3>Trabajo en equipo</h3>
+                                <p>Capacidad para colaborar con otros y lograr objetivos comunes de manera eficiente.
+                                </p>
+                            </div>
+                            <div class="aptitude-card">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <h3>Gestión del tiempo</h3>
+                                <p>Habilidad para organizar tareas y priorizar actividades para cumplir plazos de forma
+                                    eficaz.
+                                </p>
+                            </div>
+                            <div class="aptitude-card">
+                                <i class="fa-solid fa-comments"></i>
+                                <h3>Comunicación</h3>
+                                <p>Capacidad para transmitir ideas y colaborar de manera clara con diferentes
+                                    audiencias.</p>
+                            </div>
+                            <div class="aptitude-card">
+                                <i class="fa-solid fa-cogs"></i>
+                                <h3>Resolución de problemas</h3>
+                                <p>Habilidad para identificar problemas y proponer soluciones prácticas e innovadoras.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="navigation-buttons text-center mt-4">
+                            <button id="prev-aptitudes" class="btn btn-secondary me-2">&lt; Anterior</button>
+                            <button id="next-aptitudes" class="btn btn-secondary">Siguiente &gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de cosas que me gustan / cosas que hago -->
+            <section class="my-interests py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Cosas que me gustan</h2>
+                    <div class="row">
+                        <!-- Elemento 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="interest-card" data-bs-toggle="modal" data-bs-target="#modal1">
+                                <img src="../img/cofradiaBanda.jpg" alt="Interés 1" class="img-fluid rounded shadow-lg">
+                                <h4 class="text-center mt-2">Cofradía</h4>
+                            </div>
+                        </div>
+
+                        <!-- Elemento 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="interest-card" data-bs-toggle="modal" data-bs-target="#modal2">
+                                <img src="../img/viaje1.jpg" alt="Interés 2" class="img-fluid rounded shadow-lg">
+                                <h4 class="text-center mt-2">Viajar</h4>
+                            </div>
+                        </div>
+
+                        <!-- Elemento 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="interest-card" data-bs-toggle="modal" data-bs-target="#modal3">
+                                <img src="../img/animales.jpg" alt="Interés 3" class="img-fluid rounded shadow-lg">
+                                <h4 class="text-center mt-2">Animales</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 1 - Fotografía -->
+                <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal1Label">Cofradía Virgen De La Soledad</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Formo parte de la Cofradía Virgen de la Soledad de Logroño, y tengo el privilegio de
+                                    ser parte de la banda, tocando la caja. Pero para mí, esto no solo se trata de tocar
+                                    un instrumento, sino de ser parte de una gran familia. La Cofradía es mucho más que
+                                    una tradición; es un espacio donde, año tras año, compartimos momentos de esfuerzo,
+                                    devoción y, sobre todo, compañerismo.
+
+                                    Cada uno de mis compañeros es como un hermano o hermana, y juntos, nos unimos para
+                                    vivir la Semana Santa de una manera especial. La música que tocamos no es solo un
+                                    ritmo; es una expresión de lo que sentimos, de lo que nos une. Cuando estamos
+                                    juntos, ya sea ensayando o durante las procesiones, se crea una conexión única, una
+                                    energía que nos hace sentir que formamos parte de algo mucho más grande que nosotros
+                                    mismos.
+
+                                    En nuestra Cofradía, no solo compartimos el amor por la música y la fe, sino también
+                                    el respeto y la amistad. Cada uno de nosotros tiene un papel importante, y todos, de
+                                    alguna manera, nos apoyamos mutuamente. La familia que formamos es más que un grupo
+                                    de personas que se reúne para una ocasión especial: somos un equipo, una verdadera
+                                    hermandad que vive y siente la Semana Santa de Logroño con todo el corazón.</p>
+                                <div class="row">
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/cofradia.png" alt="Foto 1"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/cofradiaHalloween.jpg" alt="Foto 2"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/cofradiaBanda.jpg" alt="Foto 3"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/cofradiaNAvidad1.jpg" alt="Foto 4"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 2 - Viajar -->
+                <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal2Label">Pasión por viajar</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Viajar es mucho más que conocer nuevos lugares; para mí, es una forma de conectar con
+                                    otras culturas, de aprender y, sobre todo, de crear recuerdos junto a las personas
+                                    que me acompañan. No importa si es una escapada cercana o un viaje lejano, lo que
+                                    realmente me entusiasma es compartir cada experiencia con amigos, familiares o
+                                    incluso con nuevos compañeros que se convierten en parte de esa aventura.
+
+                                    Cada viaje es una oportunidad para descubrir algo nuevo, ya sea un paisaje
+                                    impresionante, una tradición diferente o una gastronomía fascinante. Pero lo que más
+                                    valoro son los momentos compartidos, las risas, las historias contadas alrededor de
+                                    una mesa o los instantes de asombro ante un nuevo destino. Viajar me permite crear
+                                    vínculos más profundos con las personas que se unen al viaje, y cada uno de ellos
+                                    aporta algo único a la experiencia.
+
+                                    Al igual que en una gran familia, cada miembro del viaje tiene un papel que
+                                    desempeñar. Algunos son los organizadores, otros los exploradores, y algunos
+                                    simplemente se dejan llevar. Todos juntos, formamos un equipo que vive cada momento
+                                    al máximo, aprendiendo y disfrutando de cada paso que damos. Viajar, para mí, es una
+                                    manera de sentirme más conectado con el mundo y con las personas que tengo cerca,
+                                    creando recuerdos que perduran para siempre.</p>
+                                <div class="row">
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/viaje5.jpg" alt="Viaje 1" class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/viaje2.jpg" alt="Viaje 2" class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/viaje3.jpg" alt="Viaje 3" class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/viaje4.jpg" alt="Viaje 4" class="img-fluid rounded shadow-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 3 - Cocina -->
+                <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal3Label">Amor por los animales</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Siempre he sentido una conexión especial con los animales. Para mí, no son solo
+                                    mascotas o seres que viven a nuestro lado, sino compañeros de vida que aportan algo
+                                    único a nuestro día a día. Cada animal tiene su propio carácter, su manera de
+                                    hacerte sentir querido, y eso es algo que valoro profundamente. Ya sea un perro que
+                                    te recibe con entusiasmo al final del día, un gato que te busca para que lo
+                                    acaricies, o cualquier otro animal, siempre hay algo en su mirada que te hace sentir
+                                    que son parte de la familia.
+
+                                    No hay nada como pasar tiempo con ellos, ya sea jugando en el parque, paseando por
+                                    la ciudad o simplemente compartiendo un momento de silencio juntos. Los animales
+                                    tienen una manera tan pura y sincera de mostrar afecto, y eso me recuerda lo
+                                    importante que es ser genuino y estar presente en el momento. Nos enseñan a ser más
+                                    pacientes, a disfrutar de las pequeñas cosas y, sobre todo, a dar amor sin esperar
+                                    nada a cambio.
+
+                                    Cada uno de ellos tiene algo que ofrecer, ya sea su alegría contagiante o su calma
+                                    reconfortante. En casa, no solo viven con nosotros, sino que enriquecen nuestras
+                                    vidas, nos hacen reír, nos cuidan y nos dan una sensación de tranquilidad. Los
+                                    animales son una parte esencial de lo que somos, y sin ellos, nuestras vidas serían
+                                    mucho más solitarias.</p>
+                                <div class="row">
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/animales1.jpg" alt="Cocina 1"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/animales3.jpg" alt="Cocina 2"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/animales2.jpg" alt="Cocina 3"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                    <div class="col-md-3 mb-2">
+                                        <img src="../img/animales4.jpg" alt="Cocina 4"
+                                            class="img-fluid rounded shadow-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Elisabeth Santolaya Oteiza. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/sobreMi.js"></script>
+</body>
+
+</html>
