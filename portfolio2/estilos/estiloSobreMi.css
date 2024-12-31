@@ -76,14 +76,14 @@ h2 {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.text-center h3 {
-    color: #cf969b;
-    font-weight: bold;
-}
-
 .btn-primary:hover {
     background-color: #ff9a9e;
     transform: scale(1.1);
+}
+
+.text-center h3 {
+    color: #cf969b;
+    font-weight: bold;
 }
 
 /*Tarjetas de habilidades y aptitudes */
@@ -174,7 +174,6 @@ h2 {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos dentro de las tarjetas */
 .tarjeta-interes h4 {
     font-size: 1.1rem;
     font-weight: bold;

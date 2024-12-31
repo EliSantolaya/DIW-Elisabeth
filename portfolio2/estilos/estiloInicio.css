@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-    height: 100vh;
+    height: 100%;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     background-color: #f3e1e6;
 }
 
@@ -37,6 +37,9 @@ header {
     background-position: center center;
     color: #fff;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inicio header {
@@ -83,36 +86,19 @@ header {
     background-color: #cf969b;
 }
 
-.inicio .logo img {
-    height: 50px;
-}
-
-.barra-logo {
-    color: #cf969b;
-}
-
-
-.inicio .contenido {
-    margin-left: 10%;
-    left: 15%;
-}
-
 .inicio .contenido h1 {
-    font-family: 'Mulish';
-    font-size: 170px;
-    line-height: 160px;
-    padding-top: 100px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 150px; 
+    padding-top: 50px;
     color: #cf969b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    word-wrap: break-word; 
 }
 
 .inicio .contenido .descripcion {
     margin-top: 20px;
-    font-size: 20px;
-    letter-spacing: 4px;
-}
-
-.inicio .contenido .color {
-    color: #cf969b;
+    font-size: 20px; /* Aumentamos también el tamaño de la descripción */
+    letter-spacing: 6px;
 }
 
 .inicio .contenido .redes {
@@ -141,18 +127,18 @@ header {
     border: 3px solid #cf969b;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    width: 350px;
+    width: 350px; 
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
-.sobre-mi h2,
-.experiencia h2,
-.formacion h2,
-.proyectos h2 {
+.sobre-mi h1,
+.experiencia h1,
+.formacion h1,
+.proyectos h1 {
     color: #cf969b;
+    font-weight: 400;
 }
 
 .sobre-mi p,
@@ -178,7 +164,6 @@ footer a:hover {
     font-weight: bold;
 }
 
-
 .formacion ul {
     padding-left: 0;
 }
@@ -199,48 +184,22 @@ footer a:hover {
     justify-content: center;
     position: relative;
     margin: 30px auto;
-    width: 90%;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 3px solid #cf969b;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.4s ease;
+.carousel-inner {
+    width: 100%;
 }
 
-.carousel-slide {
-    min-width: 100%;
-    transition: opacity 0.5s;
-}
-
-.carousel-slide img {
+.carousel-item img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.carousel-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.carousel-buttons button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 18px;
 }
 
 footer {
@@ -249,4 +208,46 @@ footer {
     padding: 10px 0;
     text-align: center;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #cf969b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9a9e;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .inicio .contenido h1 {
+        margin-top: 10px;  
+        font-size: 500px;  
+    }
+    .inicio .contenido {
+        margin-left: 20px;
+        margin-right: 20px; 
+    }
+
+    .sobre-mi img,
+    .experiencia img {
+        width: 150px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio .contenido h1 {
+        font-size: 10vw;
+        margin-top: 30vh;
+    }
+
+    .inicio .contenido .descripcion {
+        font-size: 1.2rem;
+    }
+
+    .inicio .contenido .redes a {
+        font-size: 1.2rem;
+    }
 }
