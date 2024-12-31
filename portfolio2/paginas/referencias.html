@@ -1,39 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>referencias</title>
-    <link rel="stylesheet" href="../estilos/estiloReferencias.css">
+    <title>Referencias - Elisabeth Santolaya</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../estilos/estiloReferencias.css"> <!-- Aquí agregas tu archivo CSS -->
 </head>
+
 <body>
-    <header>
-        <h1>Referencias de Sitios Web</h1>
-    </header>
-    
-    <div class="reference-container">
-        <div class="reference-card">
-            <h2>Sitio Web 1: Ejemplo de Página</h2>
-            <p>Este es un ejemplo de un sitio web donde puedes encontrar recursos sobre desarrollo web, tutoriales, y más. Un lugar ideal para aprender y mejorar tus habilidades de programación.</p>
-            <a href="https://www.ejemplo1.com" target="_blank">Visitar Sitio</a>
-        </div>
-    
-        <div class="reference-card">
-            <h2>Sitio Web 2: Recurso para Diseñadores</h2>
-            <p>Un sitio ideal para diseñadores gráficos y desarrolladores web. Aquí encontrarás recursos como plantillas, iconos y herramientas útiles para tu trabajo diario.</p>
-            <a href="https://www.ejemplo2.com" target="_blank">Visitar Sitio</a>
-        </div>
-    
-        <div class="reference-card">
-            <h2>Sitio Web 3: Portafolios Creativos</h2>
-            <p>Esta plataforma es perfecta para creativos. Puedes compartir tu portafolio, buscar inspiración y conectar con otros diseñadores y desarrolladores de todo el mundo.</p>
-            <a href="https://www.ejemplo3.com" target="_blank">Visitar Sitio</a>
+    <div class="wrapper">
+        <header class="py-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="../paginas/inicio.html" class="logo">
+                    <img src="../img/logoRosaSinNombre.png" alt="Logotipo" class="img-fluid logo-img">
+                </a>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#barraDeNavegacion" aria-controls="barraDeNavegacion" aria-expanded="false"
+                        aria-label="Mostrar navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="barraDeNavegacion">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="../paginas/sobremi.html">Sobre mí</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../paginas/formacion.html">Formación</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../paginas/experiencia.html">Experiencia</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../paginas/proyectos.html">Proyectos</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Referencias</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="../img/ejemploWeb1.png" class="card-img-top" alt="Sitio Web 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sitio Web 1: Davina Griss</h5>
+                            <p class="card-text">Este portfolio me ha inspirado especialmente por la disposición
+                                creativa de sus elementos, mucho más innovadora en comparación con otros portfolios. He
+                                destacado la forma en la que presenta las habilidades, utilizando un formato tipo
+                                tarjeta que aporta claridad y estilo. Además, me he inspirado en la paleta de colores
+                                pastel, que le da un toque suave y elegante.</p>
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://dorota1997.github.io/react-frontend-dev-portfolio/" target="_blank"
+                                class="btn">Visitar Sitio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="../img/ejemploWeb2.png" class="card-img-top" alt="Sitio Web 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sitio Web 2: Hamish Williams</h5>
+                            <p class="card-text">Este sitio web me ha inspirado por la simplicidad y sutileza de sus
+                                animaciones, las cuales aportan un toque dinámico sin sobrecargar la experiencia visual.
+                                Además, me he inspirado en la idea de resaltar ciertos elementos con un diseño más
+                                vistoso, lo que ayuda a captar la atención de manera efectiva.</p>
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://hamishw.com/" target="_blank" class="btn">Visitar Sitio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="../img/ejemploWeb3.png" class="card-img-top" alt="Sitio Web 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Sitio Web 3: CodeBusks</h5>
+                            <p class="card-text">Este portfolio me ha servido como inspiración para seguir una
+                                estructura similar en cuanto a la disposición general del contenido. Me ha guiado
+                                especialmente en la forma de enmarcar los proyectos, así como en la utilización de
+                                colores claros y tipografía fina, lo que aporta una sensación de limpieza y elegancia al
+                                diseño.</p>
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="https://minimal-nextjs-portfolio-website.vercel.app/" target="_blank"
+                                class="btn">Visitar Sitio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <footer>
-        <p class="mb-0">&copy; 2024 Elisabeth Santolaya Oteiza.</p>
-        <a href="../paginas/inicio.html">Portfolio Elisabeth Sanyolaya</a>
+    <footer class="bg-dark text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Elisabeth Santolaya Oteiza.</p>
+            <a href="../paginas/inicio.html">Portfolio Elisabeth Santolaya</a>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,37 +1,35 @@
-const cards = document.querySelectorAll('.skill-card');
-let currentCard = 0;
+const tarjetasHabilidad = document.querySelectorAll('.tarjeta-habilidad');
+let tarjetaActual = 0;
 
-function updateCards(direction) {
-    cards[currentCard].classList.remove('active');
+function actualizarTarjetas(direccion) {
+    tarjetasHabilidad[tarjetaActual].classList.remove('active');
 
-    if (direction === 'next') {
-        currentCard = (currentCard + 1) % cards.length; // Avanza a la siguiente carta
-    } else if (direction === 'prev') {
-        currentCard = (currentCard - 1 + cards.length) % cards.length; // Retrocede a la carta anterior
+    if (direccion === 'next') {
+        tarjetaActual = (tarjetaActual + 1) % tarjetasHabilidad.length;
+    } else if (direccion === 'prev') {
+        tarjetaActual = (tarjetaActual - 1 + tarjetasHabilidad.length) % tarjetasHabilidad.length;
     }
 
-    cards[currentCard].classList.add('active');
+    tarjetasHabilidad[tarjetaActual].classList.add('active');
 }
 
-const aptitudeCards = document.querySelectorAll('.aptitude-card');
-let currentAptitudeCard = 0;
+const tarjetasAptitud = document.querySelectorAll('.tarjeta-aptitud');
+let tarjetaAptitudActual = 0;
 
-function updateAptitudeCards(direction) {
-    aptitudeCards[currentAptitudeCard].classList.remove('active');
+function actualizarTarjetasAptitud(direccion) {
+    tarjetasAptitud[tarjetaAptitudActual].classList.remove('active');
 
-    if (direction === 'next') {
-        currentAptitudeCard = (currentAptitudeCard + 1) % aptitudeCards.length; 
-    } else if (direction === 'prev') {
-        currentAptitudeCard = (currentAptitudeCard - 1 + aptitudeCards.length) % aptitudeCards.length; 
+    if (direccion === 'next') {
+        tarjetaAptitudActual = (tarjetaAptitudActual + 1) % tarjetasAptitud.length;
+    } else if (direccion === 'prev') {
+        tarjetaAptitudActual = (tarjetaAptitudActual - 1 + tarjetasAptitud.length) % tarjetasAptitud.length;
     }
-    aptitudeCards[currentAptitudeCard].classList.add('active');
+
+    tarjetasAptitud[tarjetaAptitudActual].classList.add('active');
 }
 
-document.getElementById('prev-aptitudes').addEventListener('click', () => updateAptitudeCards('prev'));
-document.getElementById('next-aptitudes').addEventListener('click', () => updateAptitudeCards('next'));
+document.getElementById('prev-aptitudes').addEventListener('click', () => actualizarTarjetasAptitud('prev'));
+document.getElementById('next-aptitudes').addEventListener('click', () => actualizarTarjetasAptitud('next'));
 
-
-document.getElementById('prev').addEventListener('click', () => updateCards('prev'));
-document.getElementById('next').addEventListener('click', () => updateCards('next'));
-
-
+document.getElementById('prev').addEventListener('click', () => actualizarTarjetas('prev'));
+document.getElementById('next').addEventListener('click', () => actualizarTarjetas('next'));

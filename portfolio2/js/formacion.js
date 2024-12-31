@@ -1,44 +1,40 @@
-function setupBook(bookId, descriptionId, courseDetails) {
-    const book = document.getElementById(bookId);
-    const pages = book.querySelectorAll('.pages');
-    const description = document.getElementById(descriptionId);
+function setupBook(libroId, descripcionId, detallesCurso) {
+    const libro = document.getElementById(libroId);
+    const paginas = libro.querySelectorAll('.paginas');
+    const descripcion = document.getElementById(descripcionId);
 
-    pages.forEach(page => {
-        page.addEventListener('click', () => {
-            const pageId = page.id;
+    paginas.forEach(pagina => {
+        pagina.addEventListener('click', () => {
+            const pageId = pagina.id;
 
-            // Si se hace clic en la contraportada, reinicia todo
             if (pageId.toLowerCase().includes('contraportada')) {
-                resetPages(pages, description, courseDetails.default);
+                resetPages(paginas, descripcion, detallesCurso.portada);
                 return;
             }
+            pagina.classList.toggle('flipped');
 
-            // Voltear la página seleccionada
-            page.classList.toggle('flipped');
-
-            // Cambiar la descripción según el contenido de la página
-            description.innerHTML = `
-                <h2>${courseDetails[pageId]?.title || 'Página'}</h2>
-                <p>${courseDetails[pageId]?.description || 'Descripción no disponible.'}</p>
+            descripcion.innerHTML = `
+                <h2>${detallesCurso[pageId]?.title || 'Página'}</h2>
+                <p>${detallesCurso[pageId]?.description || 'Descripción no disponible.'}</p>
             `;
         });
     });
 }
 
-// Función para reiniciar todas las páginas al estado original
-function resetPages(pages, description, defaultDescription) {
-    pages.forEach(page => page.classList.remove('flipped'));
-    description.innerHTML = `
-        <h2>${defaultDescription.title}</h2>
-        <p>${defaultDescription.description}</p>
+//Reiniciar todas las páginas
+function resetPages(paginas, descripcion, descripcionPorDefecto) {
+    paginas.forEach(pagina => pagina.classList.remove('flipped'));
+    descripcion.innerHTML = `
+        <h2>${descripcionPorDefecto.title}</h2>
+        <p>${descripcionPorDefecto.description}</p>
     `;
 }
 
-// Configurar libro 1
-setupBook('book1', 'description1', {
+//Libro 1
+setupBook('libro1', 'descripcion1', {
     contraportadaFA: {
-        title: "Formación Académica",
-        description: "Para poder ver los detalles de mi formación académica, por favor, vaya pulsando sobre las distintas páginas."
+        titulo: "Formación Académica",
+        descripcion: "Para poder ver los detalles de mi formación académica, por favor, vaya pulsando sobre las distintas páginas."
     },
     DAWFA: {
         title: "Fin Formación Académica",
@@ -162,8 +158,8 @@ setupBook('book1', 'description1', {
 });
 
 
-// Configurar libro 2
-setupBook('book2', 'description2', {
+//Libro 2
+setupBook('libro2', 'descripcion2', {
     contraportada: { title: "", description: "" },
     php2FEA: {
         title: "Fin Formación Extra-Académica",

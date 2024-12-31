@@ -19,6 +19,7 @@ h2 {
     color: #cf969b;
 }
 
+/*Nav*/
 .navbar-nav .nav-link {
     color: #f3e1e6;
     position: relative;
@@ -52,15 +53,19 @@ h2 {
     bottom: 0;
     width: 100%;
     height: 3px;
-    background-color: #cf969b; /* Color rosa */
+    background-color: #cf969b;
 }
 
-.about img {
+.text-justified {
+    text-align: justify;
+}
+
+.sobre-mi img {
     border: 5px solid #cf969b;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about img:hover {
+.sobre-mi img:hover {
     transform: scale(1.0);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -71,34 +76,35 @@ h2 {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Estilo para los números dentro de las etiquetas h3 */
 .text-center h3 {
-    color: #cf969b; /* Rosa */
-    font-weight: bold; /* Para hacerlo más destacado */
+    color: #cf969b;
+    font-weight: bold;
 }
 
 .btn-primary:hover {
-    background-color: #cf969b;
+    background-color: #ff9a9e;
     transform: scale(1.1);
 }
 
-/* Estilos de las cartas de habilidades */
-.skills-cards {
+/*Tarjetas de habilidades y aptitudes */
+.tarjetas-habilidades,
+.tarjetas-aptitudes {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
 }
 
-.card-container {
+.contenedor-tarjetas {
     position: relative;
     width: 300px;
-    height: 200px;
+    height: 250px;
     perspective: 1000px;
     margin-top: 20px;
 }
 
-.skill-card {
+.tarjeta-habilidad,
+.tarjeta-aptitud {
     position: absolute;
     top: 0;
     left: 0;
@@ -115,143 +121,130 @@ h2 {
     transition: all 0.5s ease-in-out;
 }
 
-.skill-card.active {
+.tarjeta-habilidad.active,
+.tarjeta-aptitud.active {
     opacity: 1;
     transform: scale(1) rotateY(0deg);
     z-index: 1;
 }
 
-.skill-card h3 {
+.tarjeta-habilidad h3,
+.tarjeta-aptitud h3 {
     margin-top: 1rem;
     font-size: 1.5rem;
 }
 
-.skill-card p {
+.tarjeta-habilidad p,
+.tarjeta-aptitud p {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
 
-/* Estilos para las cartas de aptitudes */
-.aptitudes-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+.tarjeta-habilidad i,
+.tarjeta-aptitud i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
-.aptitude-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #cf969b;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: scale(0.8) rotateY(90deg);
-    transition: all 0.5s ease-in-out;
-}
-
-.aptitude-card.active {
-    opacity: 1;
-    transform: scale(1) rotateY(0deg);
-    z-index: 1;
-}
-
-.aptitude-card h3 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-}
-
-.aptitude-card p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.navigation-buttons .btn {
+.botones-navegacion .btn {
     background-color: #cf969b;
     border: none;
     transition: background-color 0.3s ease;
 }
 
-
-.navigation-buttons .btn:hover {
+.botones-navegacion .btn:hover {
     background-color: #ff9a9e;
 }
 
-
-/* Estilo para las tarjetas de interés */
-.interest-card {
+/*Tarjetas de interés */
+.tarjeta-interes {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.interest-card:hover {
+.tarjeta-interes:hover {
     transform: scale(1.05);
+    color: #ff9a9e;
 }
 
-.interest-card img {
+.tarjeta-interes img {
     border-radius: 10px;
     max-width: 100%;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos dentro de las tarjetas */
-.interest-card h4 {
+.tarjeta-interes h4 {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #333;
+    color: #cf969b;
 }
 
 .modal-content {
-    background-color: #f3e1e6; 
-    border-radius: 10px; 
-  }
-  
-  .modal-header {
-    background: linear-gradient(to right, #363a39, #7d7d7d); 
-    border-bottom: 2px solid #cf969b; 
-  }
-  
-  .modal-title {
-    color: #cf969b; 
-  }
-  
-  .modal-body h4, .modal-body h5 {
-    color: #cf969b;
-  }
-  
-  .modal-footer {
+    background-color: #f3e1e6;
+    border-radius: 10px;
+}
+
+.modal-header {
     background: linear-gradient(to right, #363a39, #7d7d7d);
-  }
-  
-  .btn-close {
-    color: #cf969b; 
-    opacity: 1; 
-  }
-  
-  .btn-close:hover {
-    color: #ff9a9e; 
-  }
-  
-  .btn-secondary {
-    background-color: #cf969b; 
-    color: white; 
-    border-radius: 5px; 
-    border: none; 
-    transition: background-color 0.3s ease; 
+    border-bottom: 2px solid #cf969b;
+}
+
+.modal-title {
+    color: #cf969b;
+}
+
+.modal-body h4,
+.modal-body h5 {
+    color: #cf969b;
+}
+
+.modal-body p {
+    text-align: justify;
+}
+
+.modal-footer {
+    background: linear-gradient(to right, #363a39, #7d7d7d);
+}
+
+.btn-close {
+    color: #cf969b;
+    opacity: 1;
+}
+
+.btn-close:hover {
+    color: #ff9a9e;
+}
+
+.btn-secondary {
+    background-color: #cf969b;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
     padding: 8px 15px;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #ff9a9e; 
-  }
+}
+
+.btn-secondary:hover {
+    background-color: #ff9a9e;
+}
 
 footer {
     background: linear-gradient(to right, #363a39, #7d7d7d);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #cf969b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9a9e;
+    font-weight: bold;
 }

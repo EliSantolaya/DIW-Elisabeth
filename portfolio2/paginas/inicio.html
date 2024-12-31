@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,11 +19,11 @@
                 <img src="../img/logoRosaSinNombre.png" alt="Logotipo" class="img-fluid" style="height: 50px;">
             </a>
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barraDeNavegacion"
+                    aria-controls="barraDeNavegacion" aria-expanded="false" aria-label="Mostrar navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="barraDeNavegacion">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="../paginas/sobremi.html">Sobre mí</a></li>
                         <li class="nav-item"><a class="nav-link" href="../paginas/formacion.html">Formación</a></li>
@@ -35,42 +35,131 @@
         </div>
     </header>
 
-    <section id="home" class="home text-center text-white d-flex flex-column justify-content-center align-items-center">
+    <section id="inicio" class="inicio text-center text-white d-flex flex-column justify-content-center align-items-center">
         <div class="contenido container">
             <h1 class="display-1">Elisabeth<br>Santolaya</h1>
-            <p class="descripcion mt-3">DESARROLLADORA DE APLICACIONES MULTIPLATAFORMA <span class="color">/</span>DEV
-                WORDPRESS</p>
+            <br>
+            <p class="descripcion mt-3">DESARROLLADORA DE APLICACIONES WEB Y MULTIPLATAFORMA</p>
             <div class="redes mt-4">
-                <a href="https://www.linkedin.com/in/elisabeth-santolaya-oteiza-94758526b/" class="me-3 text-white">
+                <a href="https://www.linkedin.com/in/elisabeth-santolaya-oteiza-94758526b/" class="me-3 text-white"
+                    target="_blank">
                     <i class="fa-brands fa-linkedin fa-2x"></i>
                 </a>
-                <a href="https://github.com/EliSantolaya" class="text-white">
+                <a href="https://github.com/EliSantolaya" class="text-white" target="_blank">
                     <i class="fa-brands fa-github fa-2x"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects py-5">
+    <div class="lineaHorizontal"></div>
+
+    <section id="sobre-mi" class="sobre-mi py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Proyectos Destacados</h2>
-            <div id="carouselProjects" class="carousel slide" data-bs-ride="carousel">
+            <h2 class="text-center mb-4 fw-bold">Sobre Mí</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../img/perfil2.png" alt="Elisabeth Santolaya" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <p>
+                        Soy una desarrolladora apasionada por crear soluciones innovadoras en el mundo web y móvil.
+                        Con experiencia en desarrollo de aplicaciones y un enfoque centrado en el detalle, disfruto de trabajar en equipo 
+                        y superar retos tecnológicos. Descubre más sobre mi trayectoria en el apartado 
+                        <a href="../paginas/sobremi.html" class="text-decoration-none">"Sobre Mí"</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lineaHorizontal"></div>
+
+    <section id="formacion" class="formacion py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Formación</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Comencé mi recorrido educativo con el Bachillerato de Ciencias, lo que me proporcionó una base sólida en materias científicas y un enfoque lógico y analítico. Tras finalizar este ciclo, decidí orientar mi carrera al mundo de la tecnología y el desarrollo de software.
+                    </p>
+                    <p>
+                        Actualmente, me encuentro cursando el ciclo de <strong>Desarrollo de Aplicaciones Web (DAW)</strong>, lo que me permite profundizar en el desarrollo de soluciones web utilizando tecnologías como HTML, CSS, JavaScript y frameworks modernos.
+                    </p>
+                    <p>
+                        Además, he complementado mi formación con varios cursos especializados que me han permitido ampliar mis habilidades y conocimientos en áreas clave, como:
+                    </p>
+                    <ul>
+                        <li><strong>Angular</strong>: Desarrollo de aplicaciones web con este potente framework.</li>
+                        <li><strong>Java</strong>: Programación orientada a objetos con uno de los lenguajes más utilizados en la industria.</li>
+                        <li><strong>Android Studio</strong>: Creación de aplicaciones móviles para dispositivos Android.</li>
+                        <li><strong>JavaScript</strong>: Dominio de este lenguaje esencial en el desarrollo web moderno.</li>
+                        <li><strong>UX/UI Design</strong>: Especialización en diseño de interfaces y experiencia de usuario, enfocándome en crear soluciones más atractivas y usables.</li>
+                    </ul>
+                    <p>
+                        Este conjunto de estudios me ha permitido adquirir una amplia gama de habilidades y conocimientos que aplico para desarrollar soluciones tecnológicas innovadoras y efectivas.
+                    </p>
+                    <p class="text-center">
+                        Para más detalles sobre mi formación y los cursos que he realizado, puedes visitar el apartado <a href="../paginas/formacion.html" class="text-decoration-none">"Formación"</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <div class="lineaHorizontal"></div>
+
+    <section id="experiencia" class="experiencia py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Experiencia</h2>
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <p>
+                        He trabajado en diversos proyectos desarrollando aplicaciones web y multiplataforma.
+                        Mis habilidades incluyen diseño responsivo, optimización de interfaces y experiencia de usuario (UX). 
+                        En el apartado de <a href="../paginas/experiencia.html" class="text-decoration-none">"Experiencia"</a> 
+                        encontrarás más detalles sobre los roles y proyectos destacados.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="../img/collageExperiencia.png" alt="Experiencia Profesional" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lineaHorizontal"></div>
+
+    <section id="proyectos" class="proyectos py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Proyectos Destacados</h2>
+            <div id="carruselProyectos" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../img/Proyecto1.png" class="d-block w-100" alt="Proyecto 1">
+                        <a href="../paginas/proyectos.html">
+                            <img src="../img/Proyecto1.png" class="d-block w-100" alt="Proyecto 1">
+                        </a>
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/Proyecto2.png" class="d-block w-100" alt="Proyecto 2">
+                        <a href="../paginas/proyectos.html">
+                            <img src="../img/Proyecto2.png" class="d-block w-100" alt="Proyecto 2">
+                        </a>
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/Proyecto3.png" class="d-block w-100" alt="Proyecto 3">
+                        <a href="../paginas/proyectos.html">
+                            <img src="../img/Proyecto3.png" class="d-block w-100" alt="Proyecto 3">
+                        </a>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselProyectos"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselProyectos"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
                 </button>

@@ -1,74 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
-html {
-    scroll-behavior: smooth;
-    height: 100vh;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 body {
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
     background-color: #f3e1e6;
+    display: flex;
+    flex-direction: column;
+    color: #333;
 }
 
 header {
     background: linear-gradient(to right, #363a39, #7d7d7d);
     border-bottom: 3px solid #cf969b;
-    padding: 20px;
-    text-align: center;
-    color: white;
 }
 
-.reference-container {
-    max-width: 1200px;
-    margin: 30px auto;
+h1,
+h2 {
+    font-weight: 400;
+    color: #cf969b;
+}
+
+
+.wrapper {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.reference-card {
-    background-color: white;
-    width: 80%;
-    margin: 20px 0;
-    padding: 20px;
+/*Nav*/
+.navbar-nav .nav-link {
+    color: #f3e1e6;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f3e1e6;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff9a9e;
+    transition: all 0.3s ease;
+}
+
+.text-justified {
+    text-align: justify;
+}
+
+.card {
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid #cf969b;
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.reference-card h2 {
-    font-family: 'Mulish', sans-serif;
-    font-size: 30px;
+.card p{
+    text-align: justify;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
     color: #cf969b;
-    margin-bottom: 10px;
 }
 
-.reference-card p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.reference-card a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
+.card-footer .btn {
     background-color: #cf969b;
     color: white;
-    text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
-.reference-card a:hover {
+.card-footer .btn:hover {
     background-color: #7d7d7d;
 }
 
@@ -78,4 +94,23 @@ footer {
     padding: 10px 0;
     text-align: center;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #cf969b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9a9e;
+    font-weight: bold;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.card-title {
+    color: #cf969b;
 }

@@ -1,7 +1,6 @@
 function mostrarDetalles(cargo, empresa, localizacion, descripcion, mapaUrl) {
     const detallesGeneral = document.getElementById('detalles-general');
 
-    // Actualizamos los detalles con el iframe del mapa
     detallesGeneral.innerHTML = `
         <div class="detalles-layout">
             <div class="detalles-imagen">
