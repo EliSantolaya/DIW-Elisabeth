@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 * {
     margin: 0;
@@ -97,7 +96,7 @@ header {
 
 .inicio .contenido .descripcion {
     margin-top: 20px;
-    font-size: 20px; /* Aumentamos también el tamaño de la descripción */
+    font-size: 20px; 
     letter-spacing: 6px;
 }
 

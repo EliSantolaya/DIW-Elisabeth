@@ -1,108 +1,181 @@
-body{
+body {
     margin: 0;
-    background-color: cornflowerblue;
-}
-
-.cartas {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url("./img/tapete.jpeg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
 }
 
-.fila1, .fila2{
-    margin: 0;
+#puntos {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#reiniciar {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff5733;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reiniciar:hover {
+    background-color: #ff4e28;
+    transform: scale(1.1);
+}
+
+
+.jugador1, .jugador2 {
     display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 .carta {
-    width: 300px; 
-    height: 417px;
-    background-size: cover;
-}
-
-.carta div{
-    transition: all 1s;
-}
-
-.carta .anverso{
-    z-index: 0;
-    transform: rotateY(180deg);
-}
-
-.carta .reverso{
-    z-index: 10;
-    transform: rotateY(0deg);
-}
-
-.carta:hover .anverso{
-    transform: rotateY(0deg);
-    z-index: 10;
-}
-
-.carta:hover .reverso{
-    transform: rotateY(180deg);
-    z-index: 0;
+    position: relative;
+    width: 150px;
+    height: 224px;
+    perspective: 1000px; 
 }
 
 .carta div {
-    width: 300px;
-    height: 417px;
-    background-size: cover;
+    transition: all 0.8s ease-in-out;
+}
+
+.carta .anverso,
+.carta .reverso {
+    width: 150px;
+    height: 224px;
+    background-size: contain;
     position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/*Mewtwo*/
-.mewtwo .anverso{
-    background-image: url("./img/mewtwo.png");
+.carta .anverso {
+    transform: rotateY(180deg);
 }
 
-/*Articuno*/.articuno .anverso{
-    background-image: url("./img/articuno.png");
-}
-
-/*Pikachu*/
-.pikachu .anverso{
-    background-image: url("./img/pikachu.png");
-}
-
-/*Charizar*/
-.charizar .anverso{
-    background-image: url("./img/charizard.png");
-}
-
-/*Gardevoir*/
-.gardevoir .anverso{
-    background-image: url("./img/gardevoir.png");
-}
-
-/*Greninja*/
-.greninja .anverso{
-    background-image: url("./img/greninja.png");
-}
-
-/*Moltres*/
-.moltres .anverso{
-    background-image: url("./img/moltres.png");
-}
-
-/*Venusaur*/
-.venusaur .anverso{
-    background-image: url("./img/venusaur.png");
-}
-
-
-.reverso{
+.carta .reverso {
     background-image: url("./img/reverso.png");
+    background-repeat: no-repeat;
+    transform: rotateY(0deg);
 }
 
+.carta.seleccionada .anverso {
+    transform: rotateY(0deg);
+    z-index: 10;
+}
 
+.carta.seleccionada .reverso {
+    transform: rotateY(180deg);
+    z-index: 0;
+}
 
+.jugador1 .carta .anverso,
+.jugador2 .carta .anverso {
+    width: 150px;
+    height: 224px;
+    background-size: contain;
+    position: absolute;
+    transition: all 1s;
+}
 
+.jugador1 .carta1 .anverso {
+    background-image: url("./img/articuno.png"); 
+    background-repeat: no-repeat;
+}
 
+.jugador2 .carta1 .anverso {
+    background-image: url("./img/greninja.png"); 
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta2 .anverso {
+    background-image: url("./img/charizard.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta2 .anverso {
+    background-image: url("./img/charizard.png");
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta3 .anverso {
+    background-image: url("./img/gardevoir.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta3 .anverso {
+    background-image: url("./img/moltres.png");
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta4 .anverso {
+    background-image: url("./img/greninja.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta4 .anverso {
+    background-image: url("./img/mewtwo.png");
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta5 .anverso {
+    background-image: url("./img/mewtwo.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta5 .anverso {
+    background-image: url("./img/articuno.png");
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta6 .anverso {
+    background-image: url("./img/moltres.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta6 .anverso {
+    background-image: url("./img/venusaur.png");
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta7 .anverso {
+    background-image: url("./img/pikachu.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta7 .anverso {
+    background-image: url("./img/gardevoir.png");
+    background-repeat: no-repeat;
+}
+
+.jugador1 .carta8 .anverso {
+    background-image: url("./img/venusaur.png");
+    background-repeat: no-repeat;
+}
+
+.jugador2 .carta8 .anverso {
+    background-image: url("./img/pikachu.png");
+    background-repeat: no-repeat;
+}
 
 

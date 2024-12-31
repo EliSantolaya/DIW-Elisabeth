@@ -1,4 +1,3 @@
-/* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 body {
@@ -19,7 +18,6 @@ h2 {
     color: #cf969b;
 }
 
-/*Nav*/
 .navbar-nav .nav-link {
     color: #f3e1e6;
     position: relative;
@@ -86,7 +84,6 @@ h2 {
     font-weight: bold;
 }
 
-/*Tarjetas de habilidades y aptitudes */
 .tarjetas-habilidades,
 .tarjetas-aptitudes {
     display: flex;
@@ -157,7 +154,6 @@ h2 {
     background-color: #ff9a9e;
 }
 
-/*Tarjetas de interés */
 .tarjeta-interes {
     cursor: pointer;
     transition: transform 0.3s ease;
